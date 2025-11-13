@@ -46,7 +46,7 @@ def initialize_chatbot():
 
     return RAGChatbot(
         api_key=api_key,
-        gemini_model=ACTIVE_CONFIG.get("gemini_model", "gemini-pro"),
+        gemini_model=ACTIVE_CONFIG.get("gemini_model", "gemini-1.5-flash"),
         enable_query_rewriting=ACTIVE_CONFIG.get("enable_query_rewriting", False),
         enable_reranking=ACTIVE_CONFIG.get("enable_reranking", True),
         enable_clustering=ACTIVE_CONFIG.get("enable_clustering", False),

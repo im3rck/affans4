@@ -88,7 +88,7 @@ You can customize which models to use:
 
 ```python
 chatbot = RAGChatbot(
-    gemini_model="gemini-1.5-pro-latest",      # or "gemini-pro"
+    gemini_model="gemini-1.5-pro",      # or "gemini-1.5-flash"
     embedding_model="all-MiniLM-L6-v2",        # or other sentence-transformers models
 )
 ```

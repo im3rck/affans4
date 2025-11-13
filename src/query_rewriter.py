@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 class QueryRewriter:
     """Rewrite queries using Gemini for improved retrieval"""
 
-    def __init__(self, api_key: str = None, model_name: str = "gemini-pro"):
+    def __init__(self, api_key: str = None, model_name: str = "gemini-1.5-flash"):
         api_key = api_key or os.getenv("GOOGLE_API_KEY")
         if not api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment variables")

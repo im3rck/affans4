@@ -67,6 +67,7 @@ def initialize_chatbot():
 
     return RAGChatbot(
         api_key=api_key,
+        gemini_model="gemini-1.5-pro",
         enable_query_rewriting=True,
         enable_reranking=True,
         enable_clustering=True
@@ -248,14 +249,14 @@ def main():
 
                         st.markdown(response['answer'])
 
-                        # Show metadata
+                        # Show metadata (use .get() to handle errors gracefully)
                         col1, col2, col3 = st.columns(3)
                         with col1:
-                            st.caption(f"📄 {response['num_sources']} sources")
+                            st.caption(f"📄 {response.get('num_sources', 0)} sources")
                         with col2:
-                            st.caption(f"🔄 {'Reranked' if response['reranked'] else 'Not reranked'}")
+                            st.caption(f"🔄 {'Reranked' if response.get('reranked', False) else 'Not reranked'}")
                         with col3:
-                            st.caption(f"✍️ {'Query rewritten' if response['query_rewritten'] else 'Original query'}")
+                            st.caption(f"✍️ {'Query rewritten' if response.get('query_rewritten', False) else 'Original query'}")
 
                         # Save assistant message with sources
                         st.session_state.messages.append({

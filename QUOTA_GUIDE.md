@@ -129,11 +129,11 @@ chatbot = RAGChatbot(
 ### 3. Use Faster/Cheaper Models
 
 ```python
-# Gemini Pro - 60 RPM (higher quota)
-chatbot = RAGChatbot(gemini_model="gemini-pro")
-
-# Gemini 1.5 Flash - faster, same quota
+# Gemini 1.5 Flash - fastest, good for high volume
 chatbot = RAGChatbot(gemini_model="gemini-1.5-flash")
+
+# Gemini 1.5 Pro - best quality
+chatbot = RAGChatbot(gemini_model="gemini-1.5-pro")
 ```
 
 ### 4. Implement Caching (Coming Soon)

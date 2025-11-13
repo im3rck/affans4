@@ -29,7 +29,7 @@ class ClusteringAnalyzer:
         self,
         embedding_model: str = "all-MiniLM-L6-v2",
         api_key: str = None,
-        gemini_model: str = "gemini-pro"
+        gemini_model: str = "gemini-1.5-flash"
     ):
         self.embedding_model = SentenceTransformer(embedding_model)
 
