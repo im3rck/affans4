@@ -51,6 +51,30 @@ A production-ready Retrieval-Augmented Generation (RAG) chatbot powered by Googl
 - **Web Framework**: Streamlit
 - **Document Processing**: PyPDF, python-docx, BeautifulSoup4
 
+## ⚠️ API Quota Management
+
+This chatbot uses Google Gemini API. Free tier limits:
+- **15 requests/minute**
+- **~1,500 requests/day**
+
+### API Calls Per Query
+- **Minimal config**: 1 call (~1,500 queries/day)
+- **With query rewriting**: 2-3 calls (~500 queries/day)
+- **All features**: 3-4 calls (~375 queries/day)
+
+### 🚀 Quick Start (Free Tier)
+
+**Use the optimized app to avoid quota issues:**
+```bash
+# Edit config.py and set:
+ACTIVE_PROFILE = "FREE_TIER"  # Minimal API usage
+
+# Run optimized app with quota tracking:
+streamlit run app_optimized.py
+```
+
+**See [QUOTA_GUIDE.md](QUOTA_GUIDE.md) for detailed quota management strategies.**
+
 ## Installation
 
 ### Prerequisites
