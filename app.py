@@ -67,7 +67,7 @@ def initialize_chatbot():
 
     return RAGChatbot(
         api_key=api_key,
-        gemini_model="gemini-1.5-pro",
+        gemini_model="gemini-1.5-pro-latest",
         enable_query_rewriting=True,
         enable_reranking=True,
         enable_clustering=True

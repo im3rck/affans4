@@ -9,7 +9,7 @@ from typing import List, Dict, Any, Optional
 from sklearn.cluster import KMeans, DBSCAN
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
-import umap
+from umap import UMAP
 from sentence_transformers import SentenceTransformer
 import google.generativeai as genai
 import logging
@@ -29,7 +29,7 @@ class ClusteringAnalyzer:
         self,
         embedding_model: str = "all-MiniLM-L6-v2",
         api_key: str = None,
-        gemini_model: str = "gemini-1.5-flash"
+        gemini_model: str = "gemini-1.5-flash-latest"
     ):
         self.embedding_model = SentenceTransformer(embedding_model)
 
@@ -133,7 +133,7 @@ class ClusteringAnalyzer:
         if method == "pca":
             reducer = PCA(n_components=n_components)
         elif method == "umap":
-            reducer = umap.UMAP(n_components=n_components, random_state=42)
+            reducer = UMAP(n_components=n_components, random_state=42)
         else:
             raise ValueError(f"Unknown method: {method}")
 

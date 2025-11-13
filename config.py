@@ -9,7 +9,7 @@ Adjust these settings based on your API quota and performance needs
 
 # Profile 1: FREE TIER OPTIMIZED (Minimal API usage)
 FREE_TIER_CONFIG = {
-    "gemini_model": "gemini-1.5-flash",  # Fast and efficient
+    "gemini_model": "gemini-1.5-flash-latest",  # Fast and efficient
     "enable_query_rewriting": False,  # DISABLED - saves 1-2 API calls per query
     "enable_reranking": True,  # Keep this - doesn't use Gemini API
     "enable_clustering": False,  # DISABLED - can use many API calls
@@ -19,7 +19,7 @@ FREE_TIER_CONFIG = {
 
 # Profile 2: BALANCED (Good performance, moderate API usage)
 BALANCED_CONFIG = {
-    "gemini_model": "gemini-1.5-flash",  # Faster than Pro, good balance
+    "gemini_model": "gemini-1.5-flash-latest",  # Faster than Pro, good balance
     "enable_query_rewriting": True,  # Enabled but limited
     "max_query_variations": 2,  # Limit variations (default is 3)
     "enable_reranking": True,
@@ -31,7 +31,7 @@ BALANCED_CONFIG = {
 
 # Profile 3: FULL FEATURED (Best quality, high API usage)
 FULL_FEATURED_CONFIG = {
-    "gemini_model": "gemini-1.5-pro",
+    "gemini_model": "gemini-1.5-pro-latest",
     "enable_query_rewriting": True,
     "enable_reranking": True,
     "enable_clustering": True,
@@ -41,7 +41,7 @@ FULL_FEATURED_CONFIG = {
 
 # Profile 4: PRODUCTION (Paid API key)
 PRODUCTION_CONFIG = {
-    "gemini_model": "gemini-1.5-pro",
+    "gemini_model": "gemini-1.5-pro-latest",
     "enable_query_rewriting": True,
     "enable_reranking": True,
     "enable_clustering": True,

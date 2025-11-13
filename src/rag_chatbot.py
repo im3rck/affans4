@@ -30,7 +30,7 @@ class RAGChatbot:
     def __init__(
         self,
         api_key: str = None,
-        gemini_model: str = "gemini-1.5-pro",
+        gemini_model: str = "gemini-1.5-pro-latest",
         embedding_model: str = "all-MiniLM-L6-v2",
         enable_query_rewriting: bool = True,
         enable_reranking: bool = True,
